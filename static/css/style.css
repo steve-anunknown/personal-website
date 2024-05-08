@@ -1,0 +1,87 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the body text */
+    background-color: #f4f4f9; /* Light grey background color */
+    margin: 0;
+    padding: 20px;
+    color: #333; /* Dark grey text color */
+}
+
+/* Header styles */
+h1, h2 {
+    color: #2863b0; /* Dark blue color for headings */
+}
+
+h1 {
+    font-size: 24px; /* Larger font size for main heading */
+}
+
+h2 {
+    font-size: 20px; /* Slightly smaller font size for secondary headings */
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.6; /* Makes text easier to read */
+    margin: 10px 0;
+}
+
+/* Link styles */
+a {
+    color: #26783f; /* Darkish green color for the list items */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover for links */
+}
+
+/* Image styles */
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Navigation styles */
+nav {
+    margin-bottom: 20px; /* Adds space below the navigation bar */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Displays list items inline */
+    margin-right: 10px; /* Adds space between the list items */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Centers the text in the footer */
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #ccc; /* Adds a light grey top border to the footer */
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduced padding for small devices */
+    }
+
+    nav ul li {
+        display: block; /* Stacks nav items vertically on small screens */
+        margin-bottom: 5px;
+    }
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    object-fit: cover;
+}
