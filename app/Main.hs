@@ -6,7 +6,7 @@ import Text.Blaze.Html5 as H hiding (main)
 import Text.Blaze.Html5.Attributes as A
 import Network.Wai.Middleware.Static
 import Network.Wai.Middleware.RequestLogger
-import Data.Monoid (mconcat)
+import Data.Monoid ()
 
 navigationBar :: Html
 navigationBar = do
@@ -111,7 +111,9 @@ main = scotty 3000 $ do
                             H.br
                             H.p $ do
                                 "I am into sports; I played basketball as a teenager and I still enjoy playing from time to time "
-                                "with my friends. I recently took up skiing and I can't wait for the next winter to come. "
+                                "with my friends. I also enjoy running and have run in some amateur races; mostly 5 and 10 km. "
+                                "I recently fell in love with skiing and plan to continue to ski in the future. Finally, I try to "
+                                "donate blood as often as I can."
                             H.br
                             H.p $ do
                                 "I cannot pass a day without listening to music. I mainly enjoy listening to rock and blues music, "
