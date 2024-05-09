@@ -8,22 +8,24 @@ body {
 }
 
 /* Header styles */
-h1, h2 {
-    color: #2863b0; /* Dark blue color for headings */
-}
 
 h1 {
     font-size: 24px; /* Larger font size for main heading */
+    color: #286390; /* Dark blue color for headings */
 }
 
 h2 {
     font-size: 20px; /* Slightly smaller font size for secondary headings */
+    color: #286370; /* Dark blue color for headings */
 }
 
 /* Paragraph styles */
 p {
     line-height: 1.6; /* Makes text easier to read */
+    /* make text justified */
+    text-align: justify;
     margin: 10px 0;
+    flex-grow: 1;
 }
 
 /* Link styles */
@@ -34,13 +36,6 @@ a {
 
 a:hover {
     text-decoration: underline; /* Adds underline on hover for links */
-}
-
-/* Image styles */
-img {
-    max-width: 100%; /* Makes images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners for images */
 }
 
 /* Navigation styles */
@@ -78,10 +73,31 @@ footer {
     }
 }
 
+/* Container styles */
+.container {
+    max-width: 1200px; /* Sets the maximum width of the container */
+    margin: 0 auto; /* Centers the container on the page */
+    padding: 0 20px; /* Adds padding to the sides of the container */
+}
+
+.image-container {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+/* banner-pic style is for an image that is used as a banner */
+.banner-pic {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
     border: 3px solid #ccc;
     object-fit: cover;
 }
+
