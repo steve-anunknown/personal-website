@@ -25,7 +25,14 @@ source-repository head
 
 library
   exposed-modules:
+      AboutPage
+      ExperiencePage
+      HomePage
       Lib
+      LinksPage
+      NavigationBar
+      NotFoundPage
+      RouteMaker
   other-modules:
       Paths_personal_website
   autogen-modules:
