@@ -19,3 +19,4 @@ linksPage = mkRoute "/links" "Useful Links" $ do
         H.li $ do
             H.a ! A.href "https://www.linkedin.com/in/anastasios-stefanos-anagnostou-886a17229/" $ "My LinkedIn"
         navigationBar
+    H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"

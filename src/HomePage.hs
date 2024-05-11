@@ -5,7 +5,9 @@ module HomePage (homePage) where
 import Web.Scotty as S
 import Text.Blaze.Html5 as H 
 import Text.Blaze.Html5.Attributes as A
+
 import RouteMaker (mkRoute)
+import NavigationBar (navigationBar)
 
 homePage :: ScottyM ()
 homePage = mkRoute "/" "Stefanos Anagnostou Personal Website" $ do
@@ -18,3 +20,4 @@ homePage = mkRoute "/" "Stefanos Anagnostou Personal Website" $ do
                     "Here you can find information about me, "
                     "my projects and my interests. I may even write a blog post or two."
             H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"
+            navigationBar
