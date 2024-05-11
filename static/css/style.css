@@ -101,3 +101,33 @@ footer {
     object-fit: cover;
 }
 
+
+/* General styling for the container of the code */
+pre {
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1em; /* Padding around the text */
+    overflow: auto; /* Adds a scrollbar if the content is wider than the container */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+/* Specific styling for Haskell code */
+code.haskell {
+    display: block; /* Makes the code element a block element to fill the container */
+    color: #333; /* Dark gray text */
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace; /* Monospaced font for better code readability */
+    font-size: 0.95em; /* Slightly smaller font size */
+}
+
+/* Syntax highlighting colors */
+/* Keywords */
+code.haskell .keyword { color: #a71d5d; }
+/* Strings */
+code.haskell .string { color: #183691; }
+/* Comments */
+code.haskell .comment { color: #b7b7b7; }
+/* Types and constructors */
+code.haskell .type { color: #795da3; }
+/* Functions */
+code.haskell .function { color: #4271ae; }
