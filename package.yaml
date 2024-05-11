@@ -22,9 +22,11 @@ description:         Please see the README on GitHub at <https://github.com/stev
 dependencies:
 - base >= 4.7 && < 5
 - blaze-html
+- blaze-markup
 - scotty
 - wai-extra
 - wai-middleware-static
+- text
 
 ghc-options:
 - -Wall
