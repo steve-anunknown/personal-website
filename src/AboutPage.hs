@@ -50,7 +50,7 @@ highlightHaskell codesnip = H.pre $ H.code ! A.class_ "haskell" $ do
     wrapInSpan cls textsnip = "<span class=\"" <> cls <> "\">" <> textsnip <> "</span>"
 
 aboutPage :: ScottyM ()
-aboutPage = mkRoute "/about" "About Me" $ do
+aboutPage = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
         H.div ! A.class_ "container" $ do
             H.h1 $ "About Me"
             H.div ! A.class_ "image-container" $ do

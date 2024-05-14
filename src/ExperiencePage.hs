@@ -11,7 +11,7 @@ import RouteMaker (mkRoute)
 
 
 experiencePage :: ScottyM ()
-experiencePage = mkRoute "/education-and-work" "Education and Work" $ do
+experiencePage = mkRoute "/education-and-work" "Education and Work" "icons8-favicon-30.png"  $ do
         H.div ! A.class_ "container" $ do
             H.h1 $ "Education and Work"
             H.h2 $ "Education"

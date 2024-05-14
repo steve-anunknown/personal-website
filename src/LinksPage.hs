@@ -11,7 +11,7 @@ import RouteMaker (mkRoute)
 
 
 linksPage :: ScottyM ()
-linksPage = mkRoute "/links" "Useful Links" $ do
+linksPage = mkRoute "/links" "Useful Links" "icons8-favicon-30.png" $ do
     H.h1 $ "Useful Links"
     H.ul $ do
         H.li $ do
