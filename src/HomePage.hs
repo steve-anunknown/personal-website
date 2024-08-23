@@ -15,7 +15,7 @@ homePage = mkRoute "/" "Stefanos Anagnostou Personal Website" "icons8-favicon-30
             H.h1 $ "Welcome traveller."
             H.img ! A.src "/images/lambda-irl-banner.jpg" ! A.alt "Banner Picture" ! A.class_ "banner-pic"
             H.div ! A.class_ "image-container" $ do
-                H.p $ do
+                H.h2 $ do
                     "You have landed on the personal website of Stefanos Anagnostou. "
                     "Here you can find information about me, "
                     "my projects and my interests. I may even write a blog post or two."

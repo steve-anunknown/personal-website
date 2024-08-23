@@ -101,6 +101,16 @@ footer {
     object-fit: cover;
 }
 
+.footer-logo {
+    vertical-align: middle;
+    height: 20px;
+}
+
+footer p {
+    display: inline-flex;
+    align-items: center;
+}
+
 
 /* General styling for the container of the code */
 pre {
