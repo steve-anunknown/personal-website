@@ -11,22 +11,29 @@ import ExperiencePage (experiencePage)
 import AboutPage (aboutPage)
 import NotFoundPage (notFoundPage)
 
+import System.Directory (listDirectory)
+import System.FilePath (takeExtension)
 
 main :: IO ()
-main = scotty 3000 $ do
-    -- Log all requests; remove in production if not needed
-    middleware logStdoutDev
+main = do
+    allFiles <- listDirectory "./static/audio"
+    print allFiles
+    let audioFiles = (map ("./audio/" ++ ) (filter (\f -> takeExtension f == ".mp3") allFiles))
+    print audioFiles
+    S.scotty 3000 $ do
+     -- Log all requests; remove in production if not needed
+     middleware logStdoutDev
 
-    -- Serve static files from the static directory
-    middleware $ staticPolicy (noDots >-> addBase "static")
+     -- Serve static files from the static directory
+     middleware $ staticPolicy (noDots >-> addBase "static")
 
-    homePage
+     homePage
 
-    aboutPage
+     aboutPage audioFiles
 
-    experiencePage
+     experiencePage
 
-    linksPage
+     linksPage
 
-    notFoundPage
+     notFoundPage
 

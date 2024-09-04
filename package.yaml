@@ -27,6 +27,8 @@ dependencies:
 - wai-extra
 - wai-middleware-static
 - text
+- directory
+- filepath
 
 ghc-options:
 - -Wall
