@@ -9,6 +9,7 @@ import HomePage (homePage)
 import LinksPage (linksPage)
 import ExperiencePage (experiencePage)
 import AboutPage (aboutPage)
+import BlogPage (blogPage)
 import NotFoundPage (notFoundPage)
 
 import System.Directory (listDirectory)
@@ -34,6 +35,8 @@ main = do
      experiencePage
 
      linksPage
+
+     blogPage
 
      notFoundPage
 

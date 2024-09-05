@@ -5,8 +5,6 @@ module ExperiencePage (experiencePage) where
 import Web.Scotty as S
 import Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes as A
-
-import NavigationBar (navigationBar)
 import RouteMaker (mkRoute)
 
 
@@ -36,5 +34,4 @@ experiencePage = mkRoute "/education-and-work" "Education and Work" "icons8-favi
             H.h3 $ "Software Developer Intern (June 2024 - December 2024)"
             H.p $ do
                 "At the moment, I'm interning as a Software Developer at Nokia."
-            navigationBar
         H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"

@@ -4,7 +4,13 @@ body {
     background-color: #f4f4f9; /* Light grey background color */
     margin: 0;
     padding: 20px;
-    color: #333; /* Dark grey text color */
+    color: #333; /* Dark grey text color */   
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px; /* To make room for the left banner */
+    margin-right: 100px; /* To make room for the right banner */
 }
 
 /* Header styles */
@@ -24,8 +30,81 @@ p {
     line-height: 1.6; /* Makes text easier to read */
     /* make text justified */
     text-align: justify;
+    border-radius: 8px;
     margin: 10px 0;
     flex-grow: 1;
+}
+/* General container for banner + paragraph */
+.paragraph-container {
+  width: 100%; /* Full width of the page */
+  max-width: 1200px; /* Optional: to limit the width for better readability */
+  margin: 20px auto; /* Center the container with auto margins and add space around */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Haskell container */
+.haskell-container {
+  background-color: #3a1361; /* Dark purple background matching the banner */
+  border-left: 5px solid #c49bcf; /* Border accent matching Haskell theme */
+  color: white;
+}
+
+/* Paragraph inside the Haskell container */
+.haskell-container .haskell-love {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: #3a1361; /* Keeping the original paragraph color */
+  background-color: #e7ddf0; /* Keeping the paragraph background color */
+  padding: 10px;
+}
+/* Music container */
+.music-container {
+  background-color: #73ab71; /* Greenish background matching the banner */
+  border-right: 5px solid #9ecc9b; /* Border accent matching the music theme */
+  color: white;
+}
+
+/* Paragraph inside the music container */
+.music-container .music-love {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: #324a31; /* Retains the original paragraph color */
+  background-color: #def0dd; /* Keeping the paragraph background */
+  padding: 10px;
+}
+
+/* Sports container */
+.sports-container {
+  background-color: #7ab9e8; /* Bright blue background matching sports theme */
+  border-left: 5px solid #1b3a61; /* Dark blue accent border */
+  color: white;
+}
+
+/* Paragraph inside the sports container */
+.sports-container .sports-love {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: #1b3a61; /* Retaining the original paragraph text color */
+  background-color: #e0f0fc; /* Keeping the paragraph background */
+  padding: 10px;
+}
+
+/* Books container */
+.books-container {
+  background-color: #7a6857; /* Fiery orange matching the banner */
+  border-left: 5px solid #ffcc00; /* Golden accent border */
+  color: white;
+}
+
+/* Paragraph inside the books container */
+.books-container .books-love {
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  color: #ffcc00; /* Keeping the golden text color */
+  background-color: #3e1c1e; /* Retaining the original fiery background */
+  padding: 10px;
 }
 
 /* Link styles */
@@ -57,7 +136,7 @@ nav ul li {
 footer {
     text-align: center; /* Centers the text in the footer */
     padding: 20px 0;
-    margin-top: 20px;
+    margin-top: auto;
     border-top: 1px solid #ccc; /* Adds a light grey top border to the footer */
 }
 
@@ -130,7 +209,7 @@ pre {
 /* Container for the audio player and metadata */
 #playerContainer {
     background-color: #fafafa; /* Light background color */
-    border: 2px solid #ddd; /* Light gray border */
+    border: 2px solid #a71d5d; /* Light gray border */
     border-radius: 15px; /* Rounded corners */
     padding: 30px; /* Padding inside the container */
     max-width: 650px; /* Limit the width */
@@ -159,7 +238,6 @@ pre {
     max-width: 600px;
     display: block;
     margin: 20px auto;
-    padding: 20px;
     background-color: #fff; /* Light background color */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -193,7 +271,7 @@ pre {
     margin-top: 20px;
     width: 100%;
     height: 150px;
-    border: 2px solid #ddd;
+    border: 2px solid #a71d5d;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -205,6 +283,7 @@ code.haskell {
     color: #333; /* Dark gray text */
     font-family: 'Fira Code', 'Consolas', 'Monaco', monospace; /* Monospaced font for better code readability */
     font-size: 0.95em; /* Slightly smaller font size */
+    font-weight: bold;
 }
 
 /* Syntax highlighting colors */
