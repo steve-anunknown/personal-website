@@ -40,14 +40,13 @@ highlightHaskell codesnip = H.pre $ H.code ! A.class_ "haskell" $ do
     wrapInSpan :: Text -> Text -> Text
     wrapInSpan cls textsnip = "<span class=\"" <> cls <> "\">" <> textsnip <> "</span>"
 
-aboutPage :: [String] -> ScottyM ()
-aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
-        H.div ! A.class_ "container" $ do
-            H.h1 $ "About Me"
-            H.div ! A.class_ "image-container" $ do
-                H.img ! A.src "/images/profile-fly.jpg" ! A.alt "Profile Picture" ! A.class_ "profile-pic"
-                H.div ! A.class_ "container" $ do
-                    H.div ! A.class_ "paragraph-container haskell-container" $ do
+prettyPar :: AttributeValue -> Html -> Html
+prettyPar containerType htmlContent = do
+    H.div ! A.class_ containerType $ do htmlContent 
+
+haskellBlock :: Html
+haskellBlock = prettyPar "paragraph-container haskell-container" htmlContent
+    where htmlContent = do
                         H.h3 "💻 Programmer"
                         H.p ! A.class_ "haskell-love" $ do
                             "I enjoy programming just for the sake of programming and I am an enthusiast of "
@@ -55,7 +54,9 @@ aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
                             "in general and I am curious about their design, their goals and their implementation. "
                             "Moreover, I am interested in static analysis and tailor made tools that can help "
                             "developers write better code and discover errors sooner."
-            H.div ! A.class_ "paragraph-container music-container" $ do
+musicBlock :: Html
+musicBlock = prettyPar "paragraph-container music-container" htmlContent
+    where htmlContent = do
                 H.h3 "🎶 Music Lover"
                 H.p ! A.class_ "music-love" $ do
                     "I cannot pass a day without listening to music. I mainly enjoy listening to rock and blues music, "
@@ -72,23 +73,49 @@ aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
                         H.button "Shuffle" ! A.id "shuffleButton"
                         H.audio ! A.id "audioPlayer" ! A.controls "" $ do
                             H.source ! A.src "" ! A.type_ "audio/mpeg"
-            H.div ! A.class_ "paragraph-container sports-container" $ do
+
+sportsBlock :: Html
+sportsBlock = prettyPar "paragraph-container sports-container" htmlContent
+    where htmlContent = do
                 H.h3 "🏀 Sports Dude"
                 H.p ! A.class_ "sports-love" $ do
-                    "I am into sports; I played basketball as a teenager and I still enjoy playing from time to time "
-                    "with my friends. I also enjoy running and have run in some amateur races; mostly 5 and 10 km. "
-                    "I recently fell in love with skiing and plan to continue to ski in the future. Finally, I try to "
-                    "donate blood as often as I can."
-            H.div ! A.class_ "paragraph-container books-container" $ do
+                    "I am into sports; I played basketball as a teenager and I "
+                    "still enjoy playing from time to time with my friends. I "
+                    "also enjoy running and have run in some amateur races; "
+                    "mostly 5 and 10 km. I recently fell in love with skiing "
+                    "and plan to continue to ski in the future. Finally, I try "
+                    "to donate blood as often as I can."
+
+booksBlock :: Html
+booksBlock = prettyPar "paragraph-container books-container" htmlContent
+    where htmlContent = do
                 H.h3 "🔥 Epic Fantasy Appreciator"
-                H.p ! A.class_ "books-love" $ do
-                    "Finally, I have taken a liking to books, especially fantasy books. Initially, I tried reading "
-                    "some essays, classic authors and stuff like that, but, even though I enjoyed the thematology, "
-                    "it didn't exactly relax me and I could not get myself really "
-                    "into it. However, even though I thought that novels and "
-                    "fantasy stories won't be my cup of tea, I started reading the "
-                    "Wheel of Time saga and I have grown absolutely hooked!! I "
-                    "can't wait to finish it and pick up even more amazing stories."
+                H.p ! A.class_ "books-love" $ do 
+                    "Finally, I have taken a liking to books, especially "
+                    "fantasy books. Initially, I tried reading some essays, "
+                    "classic authors and stuff like that, but, despite me " 
+                    "enjoying the thematology, it didn't exactly relax me and "
+                    "I could not get myself really into it. However, even "
+                    "though I thought that novels and fantasy stories won't "
+                    "be my cup of tea, I started reading the Wheel of Time "
+                    "saga and I have grown absolutely hooked!! I can't wait "
+                    "to finish it and pick up even more amazing stories."
+
+aboutPage :: [String] -> ScottyM ()
+aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
+        H.div ! A.class_ "royal-banner" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
+        H.div ! A.class_ "container" $ do
+            H.h1 $ "About Me"
+            H.div ! A.class_ "image-container" $ do
+                H.img ! A.src "/images/profile-fly.jpg" ! A.alt "Profile Picture" ! A.class_ "profile-pic"
+                H.div ! A.class_ "container" $ haskellBlock
+
+            musicBlock
+
+            sportsBlock
+
+            booksBlock
+
         H.script ! A.src "/dist/jsmediatags.min.js" $ ""
         H.script $ H.toHtml $ "var audioFiles = " ++ show audioFiles ++ ";"
         H.script ! A.src "/js/shuffle.js" $ ""

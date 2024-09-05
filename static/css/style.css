@@ -9,8 +9,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-left: 100px; /* To make room for the left banner */
-    margin-right: 100px; /* To make room for the right banner */
+    margin-right: 20%; /* To make room for the right banner */
 }
 
 /* Header styles */
@@ -228,7 +227,7 @@ pre {
 
 #currentArtist, #currentAlbum {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
     color: #555;
 }
 
@@ -297,3 +296,52 @@ code.haskell .comment { color: #b7b7b7; }
 code.haskell .type { color: #795da3; }
 /* Functions */
 code.haskell .function { color: #4271ae; }
+
+/* Royal banner created with CSS */
+.royal-banner {
+  position: fixed;
+  top: 0;
+  right: 100px;
+  width: 200px; /* Adjust based on your banner width */
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(180deg, #9b111e, #3a1361); /* Regal gradient colors */
+  border-right: 5px solid gold; /* Gold border for a royal look */
+  z-index: 1; /* Ensure it stays behind the content */
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Adding symbols or logos using ::before pseudo-element */
+.royal-banner::before {
+  content: "⚜"; /* Fleur-de-lis symbol or any unicode character for royal flair */
+  font-size: 3em;
+  color: gold;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.royal-banner::after {
+  content: "⚔"; /* Example of adding another symbol at the bottom */
+  font-size: 2em;
+  color: gold;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Vertical text styling */
+.vertical-text {
+  font-family: "Georgia", serif; /* Classic, royal font */
+  font-size: 1.5em; /* Adjust the font size */
+  color: gold; /* Regal gold color */
+  letter-spacing: 0.1em; /* Add a bit of spacing between the letters */
+  transform: rotate(-90deg); /* Rotate the text to make it vertical */
+  transform-origin: center; /* Keep the text centered after rotation */
+  text-align: center;
+  white-space: nowrap; /* Prevent the text from wrapping */
+}
