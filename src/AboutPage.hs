@@ -49,18 +49,24 @@ haskellBlock = prettyPar "paragraph-container haskell-container" htmlContent
     where htmlContent = do
                         H.h3 "💻 Programmer"
                         H.p ! A.class_ "haskell-love" $ do
-                            "I enjoy programming just for the sake of programming and I am an enthusiast of "
-                            "functional programming languages, especially Haskell. I love programming languages "
-                            "in general and I am curious about their design, their goals and their implementation. "
-                            "Moreover, I am interested in static analysis and tailor made tools that can help "
-                            "developers write better code and discover errors sooner."
+                            "I enjoy programming just for the sake of "
+                            "programming and I am an enthusiast of functional "
+                            "programming languages, especially Haskell. I love "
+                            "programming languages in general and I am "
+                            "curious about their design, their goals and their "
+                            "implementation. Moreover, I am interested in "
+                            "static analysis and tailor made tools that can help "
+                            "developers write better code and discover errors "
+                            "sooner."
 musicBlock :: Html
 musicBlock = prettyPar "paragraph-container music-container" htmlContent
     where htmlContent = do
                 H.h3 "🎶 Music Lover"
                 H.p ! A.class_ "music-love" $ do
-                    "I cannot pass a day without listening to music. I mainly enjoy listening to rock and blues music, "
-                    "from the 60s and 70s, and metal music. However, I'm also a big fan of rap music."
+                    "I cannot pass a day without listening to music. I mainly "
+                    "enjoy listening to rock and blues music, from the 60s "
+                    "and 70s, and metal music. However, I'm also a big fan of "
+                    "rap music."
                 highlightHaskell "data MusicILove = Rock | Blues | Metal | Rap\n -- This never stops\nlistenToMusic :: MusicILove -> IO ()\nlistenToMusic genre = vibeTo genre >> listenToMusic genre\n"
                 H.div ! A.id "playerContainer" $ do
                     H.h2 "Listen to random samples of my favorite music! (At your own risk)"
@@ -106,8 +112,8 @@ booksBlock = prettyPar "paragraph-container books-container" htmlContent
 
 aboutPage :: [String] -> ScottyM ()
 aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
-        H.div ! A.class_ "royal-banner-r" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
-        H.div ! A.class_ "royal-banner-l" $ H.span ! A.class_ "vertical-text" $ H.em "Μηδένα προ του τέλους μακάριζε"
+        -- H.div ! A.class_ "royal-banner-r" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
+        -- H.div ! A.class_ "royal-banner-l" $ H.span ! A.class_ "vertical-text" $ H.em "Μηδένα προ του τέλους μακάριζε"
         H.div ! A.class_ "container" $ do
             H.h1 $ "About Me"
             H.div ! A.class_ "image-container" $ do
