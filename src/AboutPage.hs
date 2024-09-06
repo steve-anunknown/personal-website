@@ -100,10 +100,14 @@ booksBlock = prettyPar "paragraph-container books-container" htmlContent
                     "be my cup of tea, I started reading the Wheel of Time "
                     "saga and I have grown absolutely hooked!! I can't wait "
                     "to finish it and pick up even more amazing stories."
+                    H.br
+                    H.br 
+                    H.em "\"Death is lighter than a feather, duty is heavier than a mountain.\""
 
 aboutPage :: [String] -> ScottyM ()
 aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
-        H.div ! A.class_ "royal-banner" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
+        H.div ! A.class_ "royal-banner-r" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
+        H.div ! A.class_ "royal-banner-l" $ H.span ! A.class_ "vertical-text" $ H.em "Μηδένα προ του τέλους μακάριζε"
         H.div ! A.class_ "container" $ do
             H.h1 $ "About Me"
             H.div ! A.class_ "image-container" $ do

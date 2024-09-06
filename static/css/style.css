@@ -9,7 +9,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-right: 20%; /* To make room for the right banner */
+    margin-right: 100px; /* To make room for the right banner */
+    margin-left: 100px; /* To make room for the left banner */
 }
 
 /* Header styles */
@@ -298,9 +299,10 @@ code.haskell .type { color: #795da3; }
 code.haskell .function { color: #4271ae; }
 
 /* Royal banner created with CSS */
-.royal-banner {
+.royal-banner-r {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 100px;
   width: 200px; /* Adjust based on your banner width */
   height: 100vh; /* Full height of the viewport */
@@ -314,7 +316,7 @@ code.haskell .function { color: #4271ae; }
 }
 
 /* Optional: Adding symbols or logos using ::before pseudo-element */
-.royal-banner::before {
+.royal-banner-r::before {
   content: "⚜"; /* Fleur-de-lis symbol or any unicode character for royal flair */
   font-size: 3em;
   color: gold;
@@ -324,7 +326,45 @@ code.haskell .function { color: #4271ae; }
   transform: translateX(-50%);
 }
 
-.royal-banner::after {
+.royal-banner-r::after {
+  content: "⚔"; /* Example of adding another symbol at the bottom */
+  font-size: 2em;
+  color: gold;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Royal banner created with CSS */
+.royal-banner-l {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  width: 200px; /* Adjust based on your banner width */
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(180deg, #9b111e, #3a1361); /* Regal gradient colors */
+  border-right: 5px solid gold; /* Gold border for a royal look */
+  z-index: 1; /* Ensure it stays behind the content */
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Adding symbols or logos using ::before pseudo-element */
+.royal-banner-l::before {
+  content: "⚜"; /* Fleur-de-lis symbol or any unicode character for royal flair */
+  font-size: 3em;
+  color: gold;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.royal-banner-l::after {
   content: "⚔"; /* Example of adding another symbol at the bottom */
   font-size: 2em;
   color: gold;
@@ -345,3 +385,70 @@ code.haskell .function { color: #4271ae; }
   text-align: center;
   white-space: nowrap; /* Prevent the text from wrapping */
 }
+/* General container */
+.education-work-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* H1 style for Education and Work container */
+.education-work-container h1 {
+  font-family: "Georgia", serif; /* Professional, elegant serif font */
+  font-size: 2.5em; /* Larger font size to make it stand out */
+  color: #2b3a42; /* Deep slate/navy color for professionalism */
+  text-align: center; /* Centering the H1 */
+  border-bottom: 3px solid #8b6f47; /* Gold/bronze underline to add emphasis */
+  padding-bottom: 10px; /* Padding to space the text from the underline */
+  margin-bottom: 30px; /* Space between the H1 and the rest of the content */
+  letter-spacing: 0.05em; /* Slightly increase letter spacing for readability */
+  text-transform: uppercase; /* Optional: Makes the text uppercase for more emphasis */
+}
+
+
+/* Education section */
+.education-section {
+  background-color: #e8f0ff; /* Light blue background */
+  border-left: 5px solid #2b3a42; /* Dark slate border */
+  padding: 20px;
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.education-section h2 {
+  font-family: "Georgia", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2b3a42;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2b3a42; /* Underline */
+  padding-bottom: 5px;
+}
+
+/* Work section */
+.work-section {
+  background-color: #fff6e0; /* Light gold background */
+  border-left: 5px dashed #8b6f47; /* Gold dashed border */
+  padding: 20px;
+}
+
+.work-section h2 {
+  font-family: "Georgia", serif;
+  font-size: 1.5em;
+  font-style: italic; /* Italic to differentiate from Education */
+  color: #8b6f47;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #8b6f47; /* Dashed underline */
+  padding-bottom: 5px;
+}
+
+/* Paragraphs inside each section */
+.education-section p, .work-section p {
+  font-family: "Georgia", serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #2b3a42;
+  margin-bottom: 15px;
+}
+
