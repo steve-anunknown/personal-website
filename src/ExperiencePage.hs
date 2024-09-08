@@ -49,13 +49,13 @@ nokia = do
     H.h3 "Software Developer Intern"
     H.h4 "June 2024 - December 2024"
     H.p $ do
-        "At the moment, I'm interning as a Software Developer at Nokia. "
-        "I mostly help with the maintainance of some servers and virtual "
+        "At the moment, I'm interning as a Software Developer in Nokia. "
+        "I'm part of a team that maintains some servers and virtual "
         "machines and my work mostly involves Bash scripting and Ansible "
         "playbooks."
 
 experiencePage :: ScottyM ()
-experiencePage = mkRoute "/education-and-work" "Education and Work" "icons8-favicon-30.png"  $ do
+experiencePage = mkRoute "/education-and-work" "Education and Work" "logo.svg"  $ do
         H.div ! A.class_ "education-work-container" $ do
             H.h1 "Education and Work "
             H.div ! A.class_ "education-section" $ do
