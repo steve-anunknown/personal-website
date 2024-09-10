@@ -55,7 +55,7 @@ nokia = do
         "playbooks."
 
 experiencePage :: ScottyM ()
-experiencePage = mkRoute "/education-and-work" "Education and Work" "logo.svg"  $ do
+experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg"  $ do
         H.div ! A.class_ "education-work-container" $ do
             H.h1 "Education and Work "
             H.div ! A.class_ "education-section" $ do
