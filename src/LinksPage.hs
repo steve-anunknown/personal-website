@@ -7,13 +7,15 @@ import Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes as A
 import RouteMaker (mkRoute)
 
-
 linksPage :: ScottyM ()
-linksPage = mkRoute "/links" "Useful Links" "icons8-favicon-30.png" $ do
+linksPage = mkRoute "/links" "Useful Links" "logo2.svg" $ do
     H.h1 $ "Useful Links"
-    H.ul $ do
-        H.li $ do
-            H.a ! A.href "https://www.github.com/steve-anunknown" $ "My GitHub"
-        H.li $ do
-            H.a ! A.href "https://www.linkedin.com/in/anastasios-stefanos-anagnostou-886a17229/" $ "My LinkedIn"
+    H.h2 $ do 
+      H.img ! A.src "images/github-mark.svg" ! A.alt "Github Cat Logo" ! A.class_ "footer-logo"
+      " "
+      H.a ! A.href "https://www.github.com/steve-anunknown" $ "My GitHub"
+    H.h2 $ do
+      H.img ! A.src "images/LI-In-Bug.png" ! A.alt "LinkedIn Logo" ! A.class_ "footer-logo"
+      " "
+      H.a ! A.href "https://www.linkedin.com/in/anastasios-stefanos-anagnostou-886a17229/" $ "My LinkedIn"
     H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"

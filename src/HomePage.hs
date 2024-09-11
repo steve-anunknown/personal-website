@@ -9,7 +9,7 @@ import Text.Blaze.Html5.Attributes as A
 import RouteMaker (mkRoute)
 
 homePage :: ScottyM ()
-homePage = mkRoute "/" "Stefanos Anagnostou Personal Website" "icons8-favicon-30.png" $ do
+homePage = mkRoute "/" "Stefanos Anagnostou Personal Website" "logo2.svg" $ do
         H.div ! A.class_ "container" $ do
             H.h1 $ "Welcome traveller."
             H.img ! A.src "/images/lambda-irl-banner.jpg" ! A.alt "Banner Picture" ! A.class_ "banner-pic"

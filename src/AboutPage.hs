@@ -111,13 +111,13 @@ booksBlock = prettyPar "paragraph-container books-container" htmlContent
                     H.em "\"Death is lighter than a feather, duty is heavier than a mountain.\""
 
 aboutPage :: [String] -> ScottyM ()
-aboutPage audioFiles = mkRoute "/about" "About Me" "icons8-favicon-30.png"  $ do
+aboutPage audioFiles = mkRoute "/about" "About Me" "logo2.svg" $ do
         -- H.div ! A.class_ "royal-banner-r" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
         -- H.div ! A.class_ "royal-banner-l" $ H.span ! A.class_ "vertical-text" $ H.em "Μηδένα προ του τέλους μακάριζε"
         H.div ! A.class_ "container" $ do
             H.h1 $ "About Me"
             H.div ! A.class_ "image-container" $ do
-                H.img ! A.src "/images/profile-fly.jpg" ! A.alt "Profile Picture" ! A.class_ "profile-pic"
+                H.img ! A.src "/images/profile-hotdog.jpg" ! A.alt "Me eating a hotdog" ! A.class_ "profile-pic"
                 H.div ! A.class_ "container" $ haskellBlock
 
             musicBlock
