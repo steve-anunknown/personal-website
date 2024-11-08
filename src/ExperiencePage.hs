@@ -13,11 +13,13 @@ undergraduate = do
         H.h4 "2019 - 2024"
         H.p $ do 
             "I am currently finishing my studies in Computer Engineering at the "
-            H.a ! A.href "https://www.ece.ntua.gr/en" $ "School of Electrical "
-            "and Computer Engineering in NTUA. I have majored in Computer "
-            "Systems and Control Systems, with a minor in Software "
-            "Engineering. However, I am mainly interested in Programming "
-            "Languages, Compilers and Testing."
+            H.a ! A.href "https://www.ece.ntua.gr/en" $ do
+                "School of Electrical and Computer Engineering "
+            "in "
+            H.a ! A.href "https://www..ntua.gr" $ "NTUA"
+            ". I have majored in Computer Systems and Control Systems, with"
+            "a minor in Software Engineering. However, I am mainly interested"
+            "in Programming Languages, Compilers and Testing."
         H.p $ do
             "My Diploma Thesis regards the efficient implementation of "
             "equivalence oracles in the context of minimally adequate "
@@ -46,13 +48,17 @@ anosi = do
 
 nokia :: Html
 nokia = do
-    H.h3 "Software Developer Intern"
+    H.h3 "R&D Software Developer Intern"
     H.h4 "June 2024 - December 2024"
     H.p $ do
-        "At the moment, I'm interning as a Software Developer in Nokia. "
-        "I'm part of a team that maintains some servers and virtual "
-        "machines and my work mostly involves Bash scripting and Ansible "
-        "playbooks."
+        "I interned as an R&D Software Developer in Nokia. I "
+        "was part of a team that maintained some servers and virtual machines "
+        "and my work mostly involved Bash scripting and Ansible playbooks. I "
+        "solved bugs in existing code and also enhanced it with new features. "
+        "Moreover, I developed Bash scripts from scratch that interfaced "
+        "with APIs to automate previously manual processes and that scanned "
+        "for new errors during the deployment of the product. These tools are also "
+        "now part of the testing infrastacture."
 
 experiencePage :: ScottyM ()
 experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg"  $ do
