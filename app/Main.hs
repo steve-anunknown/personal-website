@@ -21,7 +21,7 @@ main = do
     print allFiles
     let audioFiles = (map ("./audio/" ++ ) (filter (\f -> takeExtension f == ".mp3") allFiles))
     print audioFiles
-    S.scotty 3000 $ do
+    S.scotty 443 $ do
      -- Log all requests; remove in production if not needed
      middleware logStdoutDev
 
