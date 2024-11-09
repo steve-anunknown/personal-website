@@ -9,7 +9,7 @@ import RouteMaker (mkRoute)
 
 linksPage :: ScottyM ()
 linksPage = mkRoute "/links" "Useful Links" "logo2.svg" $ do
-    H.h1 $ "Useful Links"
+    H.h1 "Useful Links"
     H.h2 $ do 
       H.img ! A.src "images/github-mark.svg" ! A.alt "Github Cat Logo" ! A.class_ "footer-logo"
       " "
