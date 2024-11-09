@@ -1,8 +1,8 @@
 # personal-website
 
 This is my personal website. It's not hosted anywhere. If you are interested,
-you can run it locally. The easiest way to do that, is by having Haskell's
-`stack` installed. If you do, then running:
+you can run it locally. Just clone the repo and make sure `stack` is installed.
+Then, just run:
 
 ```
 stack build
