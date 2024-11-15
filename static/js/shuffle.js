@@ -17,8 +17,8 @@ function shuffleAudio() {
     audioPlayer.load();
     audioPlayer.play();
 
-    
-    selectedFile = selectedFile.replace('./audio', 'http://localhost:3000/audio');
+    var baseUrl = window.location.origin;
+    selectedFile = selectedFile.replace('./audio', baseUrl + '/audio');   
     // Use jsmediatags to extract and display metadata
     jsmediatags.read(selectedFile, {
         onSuccess: function(tag) {
