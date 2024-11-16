@@ -9,8 +9,8 @@ import Text.Blaze.Html5.Attributes as A
 navigationBar :: Html
 navigationBar = do
   -- make it go to the bottom of the page
-  H.h1 "Navigation"
   H.nav $ do
+    H.h1 "Navigation"
     H.ul $ do
       H.li $ do
         H.a ! A.href "/about" $ "About Me"

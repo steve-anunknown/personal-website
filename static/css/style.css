@@ -49,6 +49,7 @@ p {
   background-color: #3a1361; /* Dark purple background matching the banner */
   border-left: 5px solid #c49bcf; /* Border accent matching Haskell theme */
   color: white;
+  box-sizing: border-box;
 }
 
 /* Paragraph inside the Haskell container */
@@ -64,6 +65,7 @@ p {
   background-color: #73ab71; /* Greenish background matching the banner */
   border-right: 5px solid #9ecc9b; /* Border accent matching the music theme */
   color: white;
+  box-sizing: border-box;
 }
 
 /* Paragraph inside the music container */
@@ -80,6 +82,7 @@ p {
   background-color: #7ab9e8; /* Bright blue background matching sports theme */
   border-left: 5px solid #1b3a61; /* Dark blue accent border */
   color: white;
+  box-sizing: border-box;
 }
 
 /* Paragraph inside the sports container */
@@ -96,6 +99,7 @@ p {
   background-color: #7a6857; /* Fiery orange matching the banner */
   border-left: 5px solid #ffcc00; /* Golden accent border */
   color: white;
+  box-sizing: border-box;
 }
 
 /* Paragraph inside the books container */
@@ -157,6 +161,7 @@ footer {
     max-width: 1200px; /* Sets the maximum width of the container */
     margin: 0 auto; /* Centers the container on the page */
     padding: 0 20px; /* Adds padding to the sides of the container */
+    box-sizing: border-box;
 }
 
 .button-bar-container {
@@ -393,6 +398,7 @@ code.haskell .function { color: #4271ae; }
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 /* H1 style for Education and Work container */
 .education-work-container h1 {
