@@ -51,14 +51,23 @@ nokia = do
   H.h3 "R&D Software Developer Intern"
   H.h4 "June 2024 - December 2024"
   H.p $ do
-    "I interned as an R&D Software Developer in Nokia. I "
-    "was part of a team that maintained some servers and virtual machines "
-    "and my work mostly involved Bash scripting and Ansible playbooks. I "
-    "solved bugs in existing code and also enhanced it with new features. "
+    "I interned as an R&D Software Developer at Nokia where I "
+    "was part of a team that maintained some servers and virtual machines. "
+    "My work mostly involved Bash scripting and Ansible playbooks. I rewrote "
+    "the Ansible project so that it followed best practices and also integrated new features "
+    "related to the deployment of the servers. I also developed some Python modules that "
+    "automated the generation of spec files"
+    H.span ! A.style "font-size: 0.8em" $ " ... and broke the build in the process."
+  H.p $ do
+    "I solved bugs in existing code and also enhanced it with new features. "
     "Moreover, I developed Bash scripts from scratch that interfaced "
     "with APIs to automate previously manual processes and that scanned "
     "for new errors during the deployment of the product. These tools are also "
     "now part of the testing infrastacture."
+
+-- i want to add in small letters that i also pushed some changes that broke
+-- the build, but let's keep it a secret.
+
 
 experiencePage :: ScottyM ()
 experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg" $ do
