@@ -17,8 +17,8 @@ undergraduate = do
       "School of Electrical and Computer Engineering "
     "in "
     H.a ! A.href "https://www..ntua.gr" $ "NTUA"
-    ". I have majored in Computer Systems and Control Systems, with"
-    "a minor in Software Engineering. However, I am mainly interested"
+    ". I have majored in Computer Systems and Control Systems, with "
+    "a minor in Software Engineering. However, I am mainly interested "
     "in Programming Languages, Compilers and Testing."
   H.p $ do
     "My Diploma Thesis regards the efficient implementation of "
@@ -44,7 +44,7 @@ anosi = do
   H.p $ do
     "I worked part-time as an extracurricular tutor in the course of Computer Networks, "
     "teaching students of the Greek Professional High School and preparing "
-    "them for the Panhellenic Exams. "
+    "them for the Panhellenic Exams."
 
 nokia :: Html
 nokia = do
@@ -64,10 +64,6 @@ nokia = do
     "with APIs to automate previously manual processes and that scanned "
     "for new errors during the deployment of the product. These tools are also "
     "now part of the testing infrastacture."
-
--- i want to add in small letters that i also pushed some changes that broke
--- the build, but let's keep it a secret.
-
 
 experiencePage :: ScottyM ()
 experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg" $ do
