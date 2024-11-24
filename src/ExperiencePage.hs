@@ -16,7 +16,7 @@ undergraduate = do
     H.a ! A.href "https://www.ece.ntua.gr/en" $ do
       "School of Electrical and Computer Engineering "
     "in "
-    H.a ! A.href "https://www..ntua.gr" $ "NTUA"
+    H.a ! A.href "https://www.ntua.gr" $ "NTUA"
     ". I have majored in Computer Systems and Control Systems, with "
     "a minor in Software Engineering. However, I am mainly interested "
     "in Programming Languages, Compilers and Testing."
