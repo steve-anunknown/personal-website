@@ -9,11 +9,11 @@ import Text.Blaze.Html5.Attributes as A
 import Web.Scotty as S
 
 -- | Create a route with a given route pattern, title and content
--- | The content is an Html object
--- | The title is the title of the page
--- | The route pattern is the path of the route
--- | The route image is the path of the image that will be displayed in the tab
--- | This helps to avoid code duplication
+-- The content is an Html object
+-- The title is the title of the page
+-- The route pattern is the path of the route
+-- The route image is the path of the image that will be displayed in the tab
+-- This helps to avoid code duplication
 mkRoute :: RoutePattern -> String -> String -> H.Html -> ScottyM ()
 mkRoute routePattern routeTitle routeImage routeContent = get routePattern $ do
   S.html $ renderHtml $ do
