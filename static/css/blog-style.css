@@ -1,43 +1,87 @@
 /* blog-style.css */
 .blog-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 body {
-  font-family: 'Georgia', serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .blog-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
 }
 
 .narration {
-  color: #444;
-  font-style: normal;
-  margin-bottom: 1em;
+    color: #444;
+    font-style: normal;
+    margin-bottom: 1em;
 }
 
 .inner-dialogue {
-  font-style: italic;
-  color: #007acc;
-  margin-left: 20px;
+    font-style: italic;
+    color: #007acc;
+    margin-left: 20px;
 }
 
 .inner-dialogue em {
-  font-style: italic;
+    font-style: italic;
 }
 
+/* typing effect for code snippets */
+.prompt {
+    font-family: 'Fira Code', monospace;
+    overflow: hidden; /* hide the overflow */
+    text-align: left; /* left align the text */
+    white-space: nowrap; /* keep the text on one line */
+    letter-spacing: .15em; /* increase the space between letters */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; /* typing effect */
+}
+
+/* also, always prepend the '$' character to the text */
+.prompt::before {
+    content: '$ ';
+}
+
+.output {
+    font-family: 'Fira Code', monospace;
+    overflow: hidden; /* hide the overflow */
+    text-align: left; /* left align the text */
+    white-space: nowrap; /* keep the text on one line */
+    letter-spacing: .15em; /* increase the space between letters */
+}
+
+/* also, always prepend the '>' character to the text */
+.output::before {
+    content: '> ';
+}
+
+/* style for suppossedly viewing a file */
+/* it is a scrollable code block */
+/* only 5 lines are shown at a time */
+/* make the font small */
+.file-viewer {
+    white-space: pre-line;
+    font-size: 0.8em;
+    font-family: 'Fira Code', monospace;
+    text-align: left; /* left align the text */
+    max-height: 5em; /* only show 5 lines */
+    overflow-y: scroll; /* add a scrollbar */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
