@@ -1,0 +1,59 @@
+/* General container */
+.education-work-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: cadetblue;
+}
+/* H1 style for Education and Work container */
+.education-work-container h1 {
+  font-family: "Georgia", serif; /* Professional, elegant serif font */
+  color: lightcyan; /* Deep slate/navy color for professionalism */
+  text-align: center; /* Centering the H1 */
+  border-bottom: 3px solid #8b6f47; /* Gold/bronze underline to add emphasis */
+  padding-bottom: 10px; /* Padding to space the text from the underline */
+  text-transform: uppercase; /* Optional: Makes the text uppercase for more emphasis */
+}
+
+/* Education section */
+.education-section {
+  background-color: #c0e0e6; /* Light blue background */
+  border-left: 5px solid #2b3a42; /* Dark slate border */
+  padding: 20px;
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.education-section h2 {
+  font-family: "Georgia", serif;
+  color: #2b3a42;
+  border-bottom: 2px solid #2b3a42; /* Underline */
+}
+
+/* Work section */
+.work-section {
+  background-color: #c0e0e6; /* Light gold background */
+  border-left: 5px solid #8b6f47; /* Gold dashed border */
+  padding: 20px;
+}
+
+.work-section h2 {
+  font-family: "Georgia", serif;
+  font-style: italic; /* Italic to differentiate from Education */
+  color: #8b6f47;
+  border-bottom: 2px solid #8b6f47; /* Dashed underline */
+}
+
+/* Paragraphs inside each section */
+.education-section p, .work-section p {
+  font-family: "Georgia", serif;
+  font-size: large;
+  line-height: 1.6;
+  color: #2b3a42;
+  margin-bottom: 15px;
+}
+
+

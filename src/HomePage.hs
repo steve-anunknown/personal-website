@@ -18,3 +18,4 @@ homePage = mkRoute "/" "Stefanos Anagnostou Personal Website" "logo2.svg" $ do
         "Here you can find information about me, "
         "my projects and my interests. I may even write a blog post or two."
     H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"
+    H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/home-style.css"
