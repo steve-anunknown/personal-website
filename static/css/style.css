@@ -21,6 +21,22 @@ h2 {
     color: #286370; /* Dark blue color for headings */
 }
 
+h2 img {
+    vertical-align: middle;
+    height: 20px;
+    margin-left: 5px;
+}
+
+/* General styling for the container of the code */
+pre {
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1em; /* Padding around the text */
+    overflow: auto; /* Adds a scrollbar if the content is wider than the container */
+    line-height: 1.5; /* Spacing between lines */
+}
+
 /* Paragraph styles */
 p {
     line-height: 1.6; /* Makes text easier to read */
@@ -28,16 +44,6 @@ p {
     border-radius: 8px;
     margin: 10px 0;
     flex-grow: 1;
-}
-/* General container for banner + paragraph */
-.paragraph-container {
-  width: 100%; /* Full width of the page */
-  max-width: 1200px; /* Optional: to limit the width for better readability */
-  margin: 20px auto; /* Center the container with auto margins and add space around */
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  box-sizing: border-box;
 }
 
 /* Link styles */
@@ -70,7 +76,18 @@ footer {
     text-align: center; /* Centers the text in the footer */
     padding: 20px 0;
     margin-top: auto;
-    border-top: 1px solid #ccc; /* Adds a light grey top border to the footer */
+    border-top: 1px solid rgb(94,80,134);
+}
+
+footer p {
+    display: inline-flex;
+    align-items: center;
+}
+
+footer img {
+    vertical-align: middle;
+    height: 20px;
+    margin-left: 5px;
 }
 
 /* Media query for responsive design */
@@ -100,29 +117,14 @@ footer {
     gap: 20px;
 }
 
-footer p {
-    display: inline-flex;
-    align-items: center;
+/* General container for banner + paragraph */
+.paragraph-container {
+  width: 100%; /* Full width of the page */
+  max-width: 1200px; /* Optional: to limit the width for better readability */
+  margin: 20px auto; /* Center the container with auto margins and add space around */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-sizing: border-box;
 }
 
-footer img {
-    vertical-align: middle;
-    height: 20px;
-    margin-left: 5px;
-}
-
-h2 img {
-    vertical-align: middle;
-    height: 20px;
-    margin-left: 5px;
-}
-
-/* General styling for the container of the code */
-pre {
-    background-color: #f4f4f4; /* Light gray background */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 1em; /* Padding around the text */
-    overflow: auto; /* Adds a scrollbar if the content is wider than the container */
-    line-height: 1.5; /* Spacing between lines */
-}
