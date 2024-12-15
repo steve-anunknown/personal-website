@@ -9,6 +9,9 @@ import Text.Blaze.Html5.Attributes as A
 fileViewer :: Html -> Html
 fileViewer = H.div ! A.class_ "file-viewer"
 
+terminal :: Html -> Html
+terminal = H.code ! A.class_ "terminal"
+
 termPrompt :: Html -> Html
 termPrompt = H.code ! A.class_ "prompt"
 
@@ -125,8 +128,9 @@ demo = do
 
 theBashScript :: Html
 theBashScript = do
-  "#!/bin/bash"
-  "# Write the rest of the program"
+  "#!/bin/bash\n"
+  "whitelist=\"$1\"\n"
+  "logs=$(journalctl -q -p 3 | cut -d' ' -f4- | sed 's/\\[[0-9]*\\]//g')\n"
 
 comparingLogMessages :: Html
 comparingLogMessages =
@@ -136,7 +140,8 @@ comparingLogMessages =
         container $ do
           narration $ do
             "You are sitting comfortably on your personal computer, engaging "
-            "in your favorite intellectual pursuits, as one does. "
+            "in your favorite intellectual pursuits, as one does, with a cup of "
+            "your favourite beverage by your side. "
             "Suddenly, you start feeling a cold, trembling wave of anxiety creeping, "
             "climbing up quickly from your feet, needling its way right into your gut "
             "to unleash its frozen frenzy."
@@ -171,9 +176,9 @@ comparingLogMessages =
             "will be the new errors."
 
           narration $ do
-            "Fueled by the excitement, you get to writing."
+            "Fueled by excitement, you get to writing."
 
-          termOutput theBashScript
+          H.pre $ terminal theBashScript
 
           narration $ do
             "You pull away from the screen and marvel at your creation. To your surprise, though "
@@ -182,9 +187,80 @@ comparingLogMessages =
           innerDialogue $ do
             "The preprocessing is not perfect. My program will showcase multiple instances of "
             "essentially the same error, if it so happens that the error messages contains "
-            "a variable part"
+            "a variable part, even if the log message is in the list. For example, if I add this "
+            "error in the list:"
 
-          termOutput "echo some examples"
+          fileViewer "bluetoothd: Failed to set mode: Authentication Failed (0x05)\n"
+
+          innerDialogue $ do
+            "then the script will not report it again, but it will report every other instance of "
+            "the error, where the code is not (0x05) but is some other code."
+
+          innerDialogue $ do
+            "I could use regular expressions to filter these potentially variable parts out "
+            "and compare the logs using the rest of the string, but I can't possibly know all "
+            "the possible patterns that may turn up in advance!"
+
+          narration $ do
+            "It feels like an invisible wall, high as a tower, solid as steel, but thin as a hair, has spawned "
+            "out of nowhere in your mind, stopping you from making progress. This is nothing new. You've learned "
+            "to push through, fearless in the face of opposition ... But first, a quick walk to soothe the brain "
+            "is needed."
+
+          narration $ do
+            "You open your door and yet another flashbang blasts you in the face. You can't catch a break today. "
+            "Invisible walls may not be anything new to you, but the blazing sun and its blinding light surely is. You quickly "
+            "turn your gaze down to the street, noticing your pale arms."
+
+          innerDialogue $ do
+            "I really need to go out more often."
+
+          narration $ do
+            "Your moment of clarity loses its place to a burst of anger."
+
+          innerDialogue $ do
+            "Come on! It shouldn't be that difficult! What even is the chance that two log messages differ, if they "
+            "are both reported by the same process and share a bunch of common words!? I could just compare the first "
+            "five words for God's sake! Or maybe some words here and some words there ... Ugh I don't know."
+
+          narration $ do
+            "Your quick stroll has led you to a park, allowing you to escape the torching gaze of the sun "
+            "and find shelter in a bench under the shadow cast by an old tree. The coolness revitalizes you."
+
+          innerDialogue $ do
+            "Just lay down some basic facts."
+
+          H.div ! A.class_ "inner-dialogue" $ do
+            H.ol $ do
+                H.li "You don't know every possible pattern"
+                H.li "A pattern can occur anywhere in the log message"
+                H.li $ do
+                    "'Equal' log messages have most words equal. You don't want a "
+                    "pattern here and there deem them unequal"
+
+          narration $ do
+            "Finally, it hits you. The moment you've been waiting for."
+
+          innerDialogue $ do
+            "I think I've found it! I will compare log messages by first asserting that they are reported by the same "
+            "process and have the same amount of words in their message. This should already be enough, but for good "
+            "measure, I will iterate over them word by word, and if I find two consecutive differing words, I will "
+            "deem them unequal. Otherwise, I'll say they are equal. This way, if they happen to defer in multiple "
+            "words, I consider them to be variable patterns and don't mind, as long as they are sparse and not "
+            "consecutive! I'm a gen - "
+
+          narration $ do
+            "Your triumph is interrupted by the smell of dog pee on your shoes."
+
+          innerDialogue $ do
+            "Damn dog!"
+
+          narration $ do
+            "The dog calmly trots away, barely acknowledging your presence"
+
+          innerDialogue $ do
+            "That's enough outside for today. I'll head back home and implement my idea ..."
+
 
         H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
         H.script ! A.src "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" $ ""

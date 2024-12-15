@@ -20,28 +20,36 @@
 
 .narration {
     color: #444;
+    background-color: #eef2f6;
     font-style: normal;
     margin-bottom: 1em;
-    padding: 5px;
+    padding: 10px;
 }
 
 .inner-dialogue {
     font-style: italic;
     color: #007acc;
-    margin-left: 20px;
-    padding: 5px;
+    background-color: #e7f4ff;
+    padding: 10px;
+    padding-left: 20px;
 }
 
 .inner-dialogue em {
     font-style: italic;
 }
 
-/* typing effect for code snippets */
+.terminal {
+    font-family: 'Fira Code', monospace;
+    overflow: hidden; /* hide the overflow */
+    text-align: left; /* left align the text */
+    white-space: preline;
+}
+
 .prompt {
     font-family: 'Fira Code', monospace;
     overflow: hidden; /* hide the overflow */
     text-align: left; /* left align the text */
-    white-space: nowrap; /* keep the text on one line */
+    white-space: preline;
 }
 
 /* also, always prepend the '$' character to the text */
@@ -53,7 +61,7 @@
     font-family: 'Fira Code', monospace;
     overflow: hidden; /* hide the overflow */
     text-align: left; /* left align the text */
-    white-space: nowrap; /* keep the text on one line */
+    white-space: preline;
 }
 
 /* also, always prepend the '>' character to the text */
