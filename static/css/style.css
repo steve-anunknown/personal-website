@@ -1,7 +1,7 @@
 /* General body styles */
 body {
     font-family: Arial, sans-serif; /* Sets the font for the body text */
-    background-color: #f4f4f9; /* Light grey background color */
+    background-color: #ccd6dd;
     margin: 0;
     padding: 20px;
     color: #333; /* Dark grey text color */   
@@ -192,14 +192,16 @@ footer {
     object-fit: cover;
 }
 
-.footer-logo {
-    vertical-align: middle;
-    height: 20px;
-}
-
 footer p {
     display: inline-flex;
     align-items: center;
+}
+
+footer img {
+    vertical-align: middle;
+    height: 20px;
+    background-color: #ccd6dd;
+    margin-left: 5px;
 }
 
 
