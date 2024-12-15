@@ -1,9 +1,8 @@
 /* blog-style.css */
 .blog-container {
     max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: cadetblue;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -19,23 +18,19 @@
 }
 
 .narration {
-    color: #444;
-    background-color: #eef2f6;
-    font-style: normal;
+    font-weight: bold;
+    font-size: large;
     margin-bottom: 1em;
     padding: 10px;
 }
 
 .inner-dialogue {
     font-style: italic;
-    color: #007acc;
-    background-color: #e7f4ff;
+    font-weight: bold;
+    font-size: large;
+    color: lightcyan;
     padding: 10px;
     padding-left: 20px;
-}
-
-.inner-dialogue em {
-    font-style: italic;
 }
 
 .terminal {
@@ -79,6 +74,7 @@ pre {
 /* make the font small */
 .file-viewer {
     white-space: pre-line;
+    background-color: aliceblue;
     font-size: 0.8em;
     font-weight: bold;
     font-family: 'Fira Code', monospace;
@@ -90,4 +86,5 @@ pre {
     padding: 10px;
     margin: 10px 0;
 }
+
 
