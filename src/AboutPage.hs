@@ -72,8 +72,9 @@ musicBlock = prettyPar "paragraph-container music-container" htmlContent
         "rap music."
       highlightHaskell "data MusicILove = Rock | Blues | Metal | Rap\n -- This never stops\nlistenToMusic :: MusicILove -> IO ()\nlistenToMusic genre = vibeTo genre >> listenToMusic genre\n"
       H.div ! A.id "playerContainer" $ do
-        H.h2 "Listen to random samples of my favorite music! (At your own risk)"
-        H.h3 ! A.style "text-align:center; color:black;" $ "♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪"
+        H.h2 "♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪"
+        H.h3 "Listen to random samples of my favorite music!"
+        H.h4 "(At your own risk)"
         H.p ! A.id "currentSong" $ "Song Title: Hit Shuffle!"
         H.p ! A.id "currentArtist" $ "Artist: Hit Shuffle!"
         H.p ! A.id "currentAlbum" $ "Album: Hit Shuffle!"
@@ -136,3 +137,4 @@ aboutPage audioFiles = mkRoute "/about" "About Me" "logo2.svg" $ do
   H.script ! A.src "/js/shuffle.js" $ ""
   H.script ! A.src "/js/visualizer.js" $ ""
   H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"
+  H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/about-style.css"

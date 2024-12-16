@@ -1,8 +1,0 @@
-I am studying Computer Science in the School of Electric and Computer
-Engineering in the National Technical University of Athens. I am mainly interested
-in Computer Systems and Software Engineering, specifically in the fields of
-Programming Language Design, Compiler Construction and Software Testing.
-
-At the moment, I am working on my diploma thesis, concerning efficient
-implementation of equivalence oracles in active automata learning algorithms.
-In addition, I am a working student as a Software Developer in Nokia.

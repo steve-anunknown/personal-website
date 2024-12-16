@@ -1,115 +1,49 @@
 /* General body styles */
 body {
     font-family: Arial, sans-serif; /* Sets the font for the body text */
-    background-color: #f4f4f9; /* Light grey background color */
+    background-color: #ccd6dd;
     margin: 0;
     padding: 20px;
-    color: #333; /* Dark grey text color */   
+    color: #333; /* Dark grey text color */
     box-sizing: border-box;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-right: 100px; /* To make room for the right banner */
-    margin-left: 100px; /* To make room for the left banner */
 }
 
 /* Header styles */
 
 h1 {
-    font-size: 24px; /* Larger font size for main heading */
     color: #286390; /* Dark blue color for headings */
 }
 
 h2 {
-    font-size: 20px; /* Slightly smaller font size for secondary headings */
     color: #286370; /* Dark blue color for headings */
+}
+
+h2 img {
+    vertical-align: middle;
+    height: 20px;
+    margin-left: 5px;
+}
+
+/* General styling for the container of the code */
+pre {
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1em; /* Padding around the text */
+    overflow: auto; /* Adds a scrollbar if the content is wider than the container */
+    line-height: 1.5; /* Spacing between lines */
 }
 
 /* Paragraph styles */
 p {
     line-height: 1.6; /* Makes text easier to read */
-    /* make text justified */
     text-align: justify;
     border-radius: 8px;
     margin: 10px 0;
     flex-grow: 1;
-}
-/* General container for banner + paragraph */
-.paragraph-container {
-  width: 100%; /* Full width of the page */
-  max-width: 1200px; /* Optional: to limit the width for better readability */
-  margin: 20px auto; /* Center the container with auto margins and add space around */
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  box-sizing: border-box;
-}
-
-/* Haskell container */
-.haskell-container {
-  background-color: #3a1361; /* Dark purple background matching the banner */
-  border-left: 5px solid #c49bcf; /* Border accent matching Haskell theme */
-  color: white;
-  box-sizing: border-box;
-}
-
-/* Paragraph inside the Haskell container */
-.haskell-container .haskell-love {
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  color: #3a1361; /* Keeping the original paragraph color */
-  background-color: #e7ddf0; /* Keeping the paragraph background color */
-  padding: 10px;
-}
-/* Music container */
-.music-container {
-  background-color: #73ab71; /* Greenish background matching the banner */
-  border-right: 5px solid #9ecc9b; /* Border accent matching the music theme */
-  color: white;
-  box-sizing: border-box;
-}
-
-/* Paragraph inside the music container */
-.music-container .music-love {
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  color: #324a31; /* Retains the original paragraph color */
-  background-color: #def0dd; /* Keeping the paragraph background */
-  padding: 10px;
-}
-
-/* Sports container */
-.sports-container {
-  background-color: #7ab9e8; /* Bright blue background matching sports theme */
-  border-left: 5px solid #1b3a61; /* Dark blue accent border */
-  color: white;
-  box-sizing: border-box;
-}
-
-/* Paragraph inside the sports container */
-.sports-container .sports-love {
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  color: #1b3a61; /* Retaining the original paragraph text color */
-  background-color: #e0f0fc; /* Keeping the paragraph background */
-  padding: 10px;
-}
-
-/* Books container */
-.books-container {
-  background-color: #7a6857; /* Fiery orange matching the banner */
-  border-left: 5px solid #ffcc00; /* Golden accent border */
-  color: white;
-  box-sizing: border-box;
-}
-
-/* Paragraph inside the books container */
-.books-container .books-love {
-  font-weight: bold;
-  font-family: "Georgia", serif;
-  color: #ffcc00; /* Keeping the golden text color */
-  background-color: #3e1c1e; /* Retaining the original fiery background */
-  padding: 10px;
 }
 
 /* Link styles */
@@ -142,7 +76,18 @@ footer {
     text-align: center; /* Centers the text in the footer */
     padding: 20px 0;
     margin-top: auto;
-    border-top: 1px solid #ccc; /* Adds a light grey top border to the footer */
+    border-top: 1px solid rgb(94,80,134);
+}
+
+footer p {
+    display: inline-flex;
+    align-items: center;
+}
+
+footer img {
+    vertical-align: middle;
+    height: 20px;
+    margin-left: 5px;
 }
 
 /* Media query for responsive design */
@@ -166,296 +111,20 @@ footer {
     padding: 0 20px; /* Adds padding to the sides of the container */
 }
 
-.button-bar-container {
-    display: flex;
-    align-items: center;
-}
-
 .image-container {
     display: flex;
     justify-content: start;
     gap: 20px;
 }
 
-/* banner-pic style is for an image that is used as a banner */
-.banner-pic {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.profile-pic {
-    width: 300px;
-    height: 300px;
-    border-radius: 20%;
-    border: 3px solid #ccc;
-    object-fit: cover;
-}
-
-.footer-logo {
-    vertical-align: middle;
-    height: 20px;
-}
-
-footer p {
-    display: inline-flex;
-    align-items: center;
-}
-
-
-/* General styling for the container of the code */
-pre {
-    background-color: #f4f4f4; /* Light gray background */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 1em; /* Padding around the text */
-    overflow: auto; /* Adds a scrollbar if the content is wider than the container */
-    line-height: 1.5; /* Spacing between lines */
-}
-
-/* Container for the audio player and metadata */
-#playerContainer {
-    background-color: #fafafa; /* Light background color */
-    border: 2px solid #a71d5d; /* Light gray border */
-    border-radius: 15px; /* Rounded corners */
-    padding: 30px; /* Padding inside the container */
-    max-width: 650px; /* Limit the width */
-    margin: 30px auto; /* Center the container */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Player and Metadata Styling */
-#currentSong, #currentArtist, #currentAlbum {
-    font-size: 20px;
-    color: #333;
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center;
-}
-
-#currentArtist, #currentAlbum {
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
-}
-
-/* Style for the audio player */
-#audioPlayer {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 20px auto;
-    background-color: #fff; /* Light background color */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 1px solid #e6e6e6; /* Optional border */
-}
-
-/* Styling for the shuffle button */
-#shuffleButton {
-    background-color: #28a745; /* Slightly darker green */
-    color: white;
-    padding: 15px 32px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 20px auto;
-    margin-right: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-#shuffleButton:hover {
-    background-color: #218838; /* Darker green on hover */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
-}
-
-#visualizer {
-    margin-top: 20px;
-    width: 100%;
-    height: 150px;
-    border: 2px solid #a71d5d;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Specific styling for Haskell code */
-code.haskell {
-    display: block; /* Makes the code element a block element to fill the container */
-    color: #333; /* Dark gray text */
-    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace; /* Monospaced font for better code readability */
-    font-size: 0.95em; /* Slightly smaller font size */
-    font-weight: bold;
-}
-
-/* Syntax highlighting colors */
-/* Keywords */
-code.haskell .keyword { color: #a71d5d; }
-/* Strings */
-code.haskell .string { color: #183691; }
-/* Comments */
-code.haskell .comment { color: #b7b7b7; }
-/* Types and constructors */
-code.haskell .type { color: #795da3; }
-/* Functions */
-code.haskell .function { color: #4271ae; }
-
-/* Royal banner created with CSS */
-.royal-banner-r {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 100px;
-  width: 200px; /* Adjust based on your banner width */
-  height: 100vh; /* Full height of the viewport */
-  background: linear-gradient(180deg, #9b111e, #3a1361); /* Regal gradient colors */
-  border-right: 5px solid gold; /* Gold border for a royal look */
-  z-index: 1; /* Ensure it stays behind the content */
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Optional: Adding symbols or logos using ::before pseudo-element */
-.royal-banner-r::before {
-  content: "⚜"; /* Fleur-de-lis symbol or any unicode character for royal flair */
-  font-size: 3em;
-  color: gold;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.royal-banner-r::after {
-  content: "⚔"; /* Example of adding another symbol at the bottom */
-  font-size: 2em;
-  color: gold;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Royal banner created with CSS */
-.royal-banner-l {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 100px;
-  width: 200px; /* Adjust based on your banner width */
-  height: 100vh; /* Full height of the viewport */
-  background: linear-gradient(180deg, #9b111e, #3a1361); /* Regal gradient colors */
-  border-right: 5px solid gold; /* Gold border for a royal look */
-  z-index: 1; /* Ensure it stays behind the content */
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Optional: Adding symbols or logos using ::before pseudo-element */
-.royal-banner-l::before {
-  content: "⚜"; /* Fleur-de-lis symbol or any unicode character for royal flair */
-  font-size: 3em;
-  color: gold;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.royal-banner-l::after {
-  content: "⚔"; /* Example of adding another symbol at the bottom */
-  font-size: 2em;
-  color: gold;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Vertical text styling */
-.vertical-text {
-  font-family: "Georgia", serif; /* Classic, royal font */
-  font-size: 1.5em; /* Adjust the font size */
-  color: gold; /* Regal gold color */
-  letter-spacing: 0.1em; /* Add a bit of spacing between the letters */
-  transform: rotate(-90deg); /* Rotate the text to make it vertical */
-  transform-origin: center; /* Keep the text centered after rotation */
-  text-align: center;
-  white-space: nowrap; /* Prevent the text from wrapping */
-}
-/* General container */
-.education-work-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+/* General container for banner + paragraph */
+.paragraph-container {
+  width: 100%; /* Full width of the page */
+  max-width: 1200px; /* Optional: to limit the width for better readability */
+  margin: 20px auto; /* Center the container with auto margins and add space around */
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   box-sizing: border-box;
 }
-/* H1 style for Education and Work container */
-.education-work-container h1 {
-  font-family: "Georgia", serif; /* Professional, elegant serif font */
-  font-size: 2.5em; /* Larger font size to make it stand out */
-  color: #2b3a42; /* Deep slate/navy color for professionalism */
-  text-align: center; /* Centering the H1 */
-  border-bottom: 3px solid #8b6f47; /* Gold/bronze underline to add emphasis */
-  padding-bottom: 10px; /* Padding to space the text from the underline */
-  margin-bottom: 30px; /* Space between the H1 and the rest of the content */
-  letter-spacing: 0.05em; /* Slightly increase letter spacing for readability */
-  text-transform: uppercase; /* Optional: Makes the text uppercase for more emphasis */
-}
 
-
-/* Education section */
-.education-section {
-  background-color: #e8f0ff; /* Light blue background */
-  border-left: 5px solid #2b3a42; /* Dark slate border */
-  padding: 20px;
-  margin-bottom: 20px; /* Space between sections */
-}
-
-.education-section h2 {
-  font-family: "Georgia", serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #2b3a42;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #2b3a42; /* Underline */
-  padding-bottom: 5px;
-}
-
-/* Work section */
-.work-section {
-  background-color: #fff6e0; /* Light gold background */
-  border-left: 5px dashed #8b6f47; /* Gold dashed border */
-  padding: 20px;
-}
-
-.work-section h2 {
-  font-family: "Georgia", serif;
-  font-size: 1.5em;
-  font-style: italic; /* Italic to differentiate from Education */
-  color: #8b6f47;
-  margin-bottom: 10px;
-  border-bottom: 2px dashed #8b6f47; /* Dashed underline */
-  padding-bottom: 5px;
-}
-
-/* Paragraphs inside each section */
-.education-section p, .work-section p {
-  font-family: "Georgia", serif;
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #2b3a42;
-  margin-bottom: 15px;
-}

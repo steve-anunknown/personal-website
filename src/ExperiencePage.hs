@@ -83,3 +83,4 @@ experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg" 
       nokia
 
   H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css "
+  H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/experience-style.css "
