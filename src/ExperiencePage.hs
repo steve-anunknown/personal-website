@@ -12,7 +12,7 @@ undergraduate = do
   H.h3 "Integrated Master's Degree in Computer Engineering "
   H.h4 "2019 - 2024"
   H.p $ do
-    "I am currently finishing my studies in Computer Engineering at the "
+    "I finished my studies in Computer Engineering at the "
     H.a ! A.href "https://www.ece.ntua.gr/en" $ do
       "School of Electrical and Computer Engineering "
     "in "
