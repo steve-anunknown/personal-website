@@ -9,7 +9,8 @@
 # to be used for project dependencies. For example:
 #
 # resolver: lts-22.7
-resolver: nightly-2024-05-06
+# resolver: nightly-2024-05-06
+snapshot: lts-22.44
 # resolver: ghc-9.8.2
 #
 # The location of a snapshot can be provided as a file or url. Stack assumes
