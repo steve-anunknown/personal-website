@@ -6,7 +6,6 @@ import Data.Monoid ()
 import ExperiencePage (experiencePage)
 import HomePage (homePage)
 import LinksPage (linksPage)
-import Network.Wai.Middleware.RequestLogger (logStdoutDev)
 import Network.Wai.Middleware.Static
   ( addBase,
     noDots,
@@ -24,9 +23,9 @@ main = do
   print allFiles
   let audioFiles = map ("./audio/" ++) (filter (\f -> takeExtension f == ".mp3") allFiles)
   print audioFiles
-  S.scotty 80 $ do
+  S.scotty 5001 $ do
     -- Log all requests; remove in production if not needed
-    S.middleware logStdoutDev
+    -- S.middleware logStdoutDev
 
     -- Serve static files from the static directory
     S.middleware $ staticPolicy (noDots >-> addBase "static")
