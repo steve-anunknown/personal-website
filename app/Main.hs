@@ -6,6 +6,7 @@ import Data.Monoid ()
 import ExperiencePage (experiencePage)
 import HomePage (homePage)
 import LinksPage (linksPage)
+import Network.Wai.Middleware.Gzip (defaultGzipSettings, gzip)
 import Network.Wai.Middleware.Static
   ( addBase,
     noDots,
@@ -26,6 +27,8 @@ main = do
   S.scotty 5001 $ do
     -- Log all requests; remove in production if not needed
     -- S.middleware logStdoutDev
+
+    S.middleware $ gzip defaultGzipSettings
 
     -- Serve static files from the static directory
     S.middleware $ staticPolicy (noDots >-> addBase "static")
