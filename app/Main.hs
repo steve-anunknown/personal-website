@@ -8,9 +8,13 @@ import HomePage (homePage)
 import LinksPage (linksPage)
 import Network.Wai.Middleware.Gzip (defaultGzipSettings, gzip)
 import Network.Wai.Middleware.Static
-  ( addBase,
+  ( CachingStrategy (..),
+    addBase,
+    cacheContainer,
+    defaultOptions,
+    initCaching,
     noDots,
-    staticPolicy,
+    staticPolicyWithOptions,
     (>->),
   )
 import NotFoundPage (notFoundPage)
@@ -24,14 +28,15 @@ main = do
   print allFiles
   let audioFiles = map ("./audio/" ++) (filter (\f -> takeExtension f == ".mp3") allFiles)
   print audioFiles
+  cache <- initCaching PublicStaticCaching
   S.scotty 5001 $ do
     -- Log all requests; remove in production if not needed
     -- S.middleware logStdoutDev
 
     S.middleware $ gzip defaultGzipSettings
 
-    -- Serve static files from the static directory
-    S.middleware $ staticPolicy (noDots >-> addBase "static")
+    -- Serve static files from the static directory with public caching headers
+    S.middleware $ staticPolicyWithOptions (defaultOptions {cacheContainer = cache}) (noDots >-> addBase "static")
 
     homePage
 
