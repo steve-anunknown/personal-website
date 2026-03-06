@@ -72,7 +72,7 @@ musicBlock = prettyPar "paragraph-container music-container" htmlContent
         "rap music."
       highlightHaskell "data MusicILove = Rock | Blues | Metal | Rap\n -- This never stops\nlistenToMusic :: MusicILove -> IO ()\nlistenToMusic genre = vibeTo genre >> listenToMusic genre\n"
       H.div ! A.id "playerContainer" $ do
-        H.h2 "♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪"
+        H.h2 "♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪"
         H.h3 "Listen to random samples of my favorite music!"
         H.h4 "(At your own risk)"
         H.p ! A.id "currentSong" $ "Song Title: Hit Shuffle!"
@@ -117,7 +117,7 @@ booksBlock = prettyPar "paragraph-container books-container" htmlContent
         H.em "\"Death is lighter than a feather, duty is heavier than a mountain.\""
 
 aboutPage :: [String] -> ScottyM ()
-aboutPage audioFiles = mkRoute "/about" "About Me" "logo2.svg" $ do
+aboutPage audioFiles = mkRoute "/about" "About Me" "logo2.svg" ["/css/style.css", "/css/about-style.css"] $ do
   -- H.div ! A.class_ "royal-banner-r" $ H.span ! A.class_ "vertical-text" $ "House of Steve"
   -- H.div ! A.class_ "royal-banner-l" $ H.span ! A.class_ "vertical-text" $ H.em "Μηδένα προ του τέλους μακάριζε"
   H.div ! A.class_ "container" $ do
@@ -136,5 +136,3 @@ aboutPage audioFiles = mkRoute "/about" "About Me" "logo2.svg" $ do
   H.script $ H.toHtml $ "var audioFiles = " ++ show audioFiles ++ ";"
   H.script ! A.src "/js/shuffle.js" $ ""
   H.script ! A.src "/js/visualizer.js" $ ""
-  H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css"
-  H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/about-style.css"

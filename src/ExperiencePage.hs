@@ -71,7 +71,7 @@ cv = do
     H.a ! A.href "/cv.pdf" ! A.download "stefanos_anagnostou_cv.pdf" $ "my cv!"
 
 experiencePage :: ScottyM ()
-experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg" $ do
+experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg" ["/css/style.css", "/css/experience-style.css"] $ do
     H.div ! A.class_ "education-work-container" $ do
         H.h1 "Education and Work "
         H.h2 ! A.style "text-align: center" $ cv
@@ -86,6 +86,3 @@ experiencePage = mkRoute "/education-and-work" "Education and Work" "logo2.svg" 
             anosi
 
             nokia
-
-    H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/style.css "
-    H.link ! A.rel "stylesheet" ! A.type_ "text/css" ! A.href "/css/experience-style.css "
